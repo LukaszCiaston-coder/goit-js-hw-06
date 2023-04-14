@@ -19,6 +19,7 @@ images.forEach((image) => {
     <img src="${image.url}" alt="${image.alt}">
     </li>`;
   list.insertAdjacentHTML('beforeend', li);
+  
   const gallery = document.querySelector(".gallery")
   gallery.style.display = 'flex';
   gallery.style.flexWrap = 'wrap';
