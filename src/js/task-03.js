@@ -24,17 +24,19 @@ images.forEach((image) => {
   gallery.style.display = 'flex';
   gallery.style.flexWrap = 'wrap';
   gallery.style.justifyContent = 'center';
+  gallery.style.height = '100vh';
+  gallery.style.background = 'linear-gradient(to bottom,#141272, #00a78e)';
   gallery.style.listStyle = 'none';
   const items = document.querySelectorAll('li');
   items.forEach((item) => {
-    item.style.flexBasis = '50%';
+    item.style.flexBasis = '30%';
     item.style.padding = '15px';
     item.style.boxSizing = 'border-box';
     const img = item.querySelector('img');
     img.style.maxWidth = '100%';
-    img.style.height = 'auto';
+    img.style.height = '250px';
     img.style.borderRadius = '10%';
-    
+    img.style["webkitBoxReflect"] ='below 0px linear-gradient(transparent,transparent,#0004)';
   })
   
 });
