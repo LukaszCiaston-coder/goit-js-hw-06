@@ -1,11 +1,14 @@
 'use strict';
-function countCategoriesByld() {
-    const categories = document.getElementsByTagName(`h2`);
-    let sum = 0
-    for (let i = 0; i < categories.length; i++){
-        sum += 1;
-    }
-    console.log(`Number of categories: ${sum}`);
-};
+function countCategoriesAndFindHeaderAndCount() {
+    const listItems = document.querySelectorAll('ul#categories li.item');
+    const numCategories = listItems.length;
+    console.log(`Number of categories: ${numCategories}`);
+    listItems.forEach((item) => {
+        const header = item.querySelector('h2').innerText;
+        const count = item.querySelectorAll('li').length;
+        console.log(`Category:${header}`) 
+        console.log(`Elements: ${count}`)
+    });
+}
 
-countCategoriesByld(`categories`);
+countCategoriesAndFindHeaderAndCount(`listItems`) 
