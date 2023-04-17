@@ -1,3 +1,4 @@
+'use strict';
 const controls = document.getElementById('controls'); 
 const createButton = controls.querySelector('[data-create]'); 
 const destroyButton = controls.querySelector('[data-destroy]'); 

@@ -1,3 +1,4 @@
+'use strict';
 const input = document.getElementById('validation-input');
 const dataLength = input.dataset.length;
 input.addEventListener('blur', () => {

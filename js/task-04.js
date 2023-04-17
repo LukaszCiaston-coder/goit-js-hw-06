@@ -1,3 +1,4 @@
+'use strict';
 const counterValue = document.getElementById('value');
 let count = 0;
 const incrementBtn = document.querySelector('[data-action="increment"]');
