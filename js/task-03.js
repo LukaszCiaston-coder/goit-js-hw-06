@@ -14,14 +14,18 @@ const images = [
   },
 ];
 
-const list = document.querySelector('ul');
-images.forEach((image) => {
-  const li = `<li>
-    <img src="${image.url}" alt="${image.alt}">
-    </li>`;
-  list.insertAdjacentHTML('beforeend', li);
-  
-  const gallery = document.querySelector(".gallery")
+const copyImages = [];
+const gallery = document.querySelector(".gallery");
+console.log(gallery);
+images.forEach((img) => {
+  copyImages.push(img);
+});
+const mapImages = copyImages
+  .map((img) => `<li><img src="${img.url} alt=${img.alt}"</li>`)
+  .join("");
+console.log(mapImages);
+gallery.insertAdjacentHTML(`afterbegin`, mapImages);
+
   gallery.style.display = 'flex';
   gallery.style.flexWrap = 'wrap';
   gallery.style.padding = '60px 30px 60px 30px';
@@ -40,8 +44,4 @@ images.forEach((image) => {
     img.style.borderRadius = '10%';
     img.style["webkitBoxReflect"] ='below 0px linear-gradient(transparent,transparent,#0004)';
   })
-  
-});
 
-
-console.log(list)
